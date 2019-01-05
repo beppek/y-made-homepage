@@ -2,14 +2,14 @@ backend:
   name: github
   repo: beppek/y-made-homepage
 
-media_folder: static/assets
+media_folder: static/assets/media
 public_folder: assets
 
 collections:
   - name: gallery
     label: Gallery
     label_singular: Image
-    folder: gallery
+    folder: content/gallery
     create: true
     fields:
       - { name: file, label: File, widget: image }
@@ -17,7 +17,7 @@ collections:
       - { name: description, label: Description, widget: markdown }
   - name: info
     label: Information
-    folder: 'content/info'
+    folder: content/info
     create: false
     fields:
       - { name: title, label: Title }
