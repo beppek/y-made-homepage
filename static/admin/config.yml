@@ -21,4 +21,5 @@ collections:
     create: false
     fields:
       - { name: title, label: Title }
+      - { name: subtitle, label: Subitle }
       - { name: body, label: Body, widget: markdown }

@@ -1,7 +1,7 @@
 ---
 templateKey: info
-title: "Here's Y We Should
-  Build Together..."
+title: Here's Y We Should
+subtitle: Build Together...
 body: 'We build design driven developments that allow our owners to live a full
   life, within a home that has been considered down to the last detail.
   Using a collaborative approach with other like-minded companies, our
