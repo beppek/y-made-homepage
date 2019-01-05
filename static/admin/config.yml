@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: beppek/y-made-homepage
 
 media_folder: static/assets
 public_folder: assets
@@ -8,7 +9,7 @@ collections:
   - name: gallery
     label: Gallery
     label_singular: Image
-    folder: 'content/gallery'
+    folder: gallery
     create: true
     fields:
       - { name: file, label: File, widget: image }
