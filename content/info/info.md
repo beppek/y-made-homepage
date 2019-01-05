@@ -9,8 +9,5 @@ content: >-
   success lies in being able to maximise space, and focus on what truly adds
   value, so we can create an attainable and affordable homes for the new
   generation of house buyer.
-
-
-  I'm just testing adding some stuff
 ---
 
