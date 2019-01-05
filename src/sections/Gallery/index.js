@@ -1,29 +1,54 @@
 import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 
 import SectionWrapper from '../../components/SectionWrapper';
 import ImageWrapper from '../../components/ImageWrapper';
 import colors from '../../constants/colors';
 
-import constructionWorker from '../../img/builder.jpg';
-
 import GalleryControls from './GalleryControls';
 import Wrapper from './Wrapper';
 
-const BuildTogether = () => {
+const Gallery = () => {
   return (
-    <SectionWrapper backgroundColor={colors.backgroundMain}>
-      <Wrapper>
-        <ImageWrapper>
-          <img
-            style={{ height: '75%' }}
-            src={constructionWorker}
-            alt="construction worker in st kilda doing his thing."
-          />
-        </ImageWrapper>
-        <GalleryControls />
-      </Wrapper>
-    </SectionWrapper>
+    <StaticQuery
+      query={galleryQuery}
+      render={data => {
+        console.log(data);
+        const { frontmatter } = data.allMarkdownRemark.edges[0].node;
+        return (
+          <SectionWrapper backgroundColor={colors.backgroundMain}>
+            <Wrapper>
+              <ImageWrapper>
+                <img
+                  title={frontmatter.title}
+                  style={{ height: '75%' }}
+                  src={frontmatter.file}
+                  alt={frontmatter.description}
+                />
+              </ImageWrapper>
+              <GalleryControls />
+            </Wrapper>
+          </SectionWrapper>
+        );
+      }}
+    />
   );
 };
 
-export default BuildTogether;
+export default Gallery;
+
+const galleryQuery = graphql`
+  query {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/gallery/" } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            description
+            file
+          }
+        }
+      }
+    }
+  }
+`;
