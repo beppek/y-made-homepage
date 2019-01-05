@@ -1,6 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+
+  @font-face {
+    font-family: 'MessinaSans Regular';
+    src: url('/assets/fonts/MessinaSansWeb-Regular.woff2') format('woff2'),
+      url('/assets/fonts/MessinaSansWeb-Regular.woff') format('woff'),
+      url('/assets/fonts/MessinaSans-Regular.otf') format('otf'),
+      url('/assets/fonts/MessinaSansWeb-Regular.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -17,6 +28,7 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: 'MessinaSans Regular', Helvetica;
   }
 
   /* HTML5 display-role reset for older browsers */
