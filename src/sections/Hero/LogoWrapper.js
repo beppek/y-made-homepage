@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
+import { paddingNumber, paddingUnit } from '../../constants/units';
+
 const LogoWrapper = styled.div`
-  width: 100%;
+  width: ${`calc(100% - ${paddingNumber + paddingUnit})`};
   position: absolute;
-  top: 0;
-  left: 0;
+  top: ${paddingNumber + paddingUnit};
+  left: ${paddingNumber + paddingUnit};
 `;
 
 export default LogoWrapper;

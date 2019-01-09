@@ -4,6 +4,9 @@ import Wrapper from './Wrapper';
 import LogoWrapper from './LogoWrapper';
 import ImageWrapper from '../../components/ImageWrapper';
 import ArrowWrapper from './ArrowWrapper';
+import Logo from './Logo';
+
+import logo from '../../img/YMade_Website_Logo.svg';
 
 import bigY from '../../img/big-y.png';
 import downArrow from '../../img/down-arrow.png';
@@ -12,7 +15,8 @@ const Hero = () => {
   return (
     <Wrapper>
       <LogoWrapper>
-        <h1>Y Made</h1>
+        <h1 className="main-heading">Y Made</h1>
+        <Logo src={logo} alt="Y Made" />
       </LogoWrapper>
       <ImageWrapper>
         <img

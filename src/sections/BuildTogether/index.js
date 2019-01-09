@@ -12,12 +12,12 @@ const BuildTogether = () => {
         const { frontmatter } = data.allMarkdownRemark.edges[0].node;
         return (
           <SectionWrapper backgroundColor={colors.backgroundInfo}>
-            <h2>
+            <h2 className="info-header">
               {frontmatter.title}
               <br />
               {frontmatter.subtitle}
             </h2>
-            <p>{frontmatter.content}</p>
+            <p className="info-text">{frontmatter.content}</p>
           </SectionWrapper>
         );
       }}

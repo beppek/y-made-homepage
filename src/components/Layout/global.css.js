@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { paddingNumber, paddingUnit } from '../../constants/units';
+
 export default createGlobalStyle`
 
   @font-face {
@@ -29,12 +31,29 @@ export default createGlobalStyle`
     padding: 0;
     border: 0;
     font-family: 'MessinaSans Regular', Helvetica;
+    font-size: 1.8rem;
+    font-weight: normal;
   }
 
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
     display: block;
+  }
+
+  .main-heading {
+    display: none;
+  }
+
+  .contact-header {
+    width: ${`calc(100% - ${paddingNumber * 2}${paddingUnit})`};
+  }
+
+  .info-text {
+    position: absolute;
+    bottom: ${paddingNumber + paddingUnit};
+    left: ${paddingNumber + paddingUnit};
+    right: ${paddingNumber + paddingUnit};
   }
 
 `;
