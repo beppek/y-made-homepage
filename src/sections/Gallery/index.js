@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
 import SectionWrapper from '../../components/SectionWrapper';
@@ -8,32 +8,62 @@ import colors from '../../constants/colors';
 import GalleryControls from './GalleryControls';
 import Wrapper from './Wrapper';
 
-const Gallery = () => {
-  return (
-    <StaticQuery
-      query={galleryQuery}
-      render={data => {
-        console.log(data);
-        const { frontmatter } = data.allMarkdownRemark.edges[0].node;
-        return (
-          <SectionWrapper backgroundColor={colors.backgroundMain}>
-            <Wrapper>
-              <ImageWrapper>
-                <img
-                  title={frontmatter.title}
-                  style={{ height: '75%' }}
-                  src={frontmatter.file}
-                  alt={frontmatter.description}
+class Gallery extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      imgIndex: 0,
+    };
+  }
+
+  handleArrowClick = (i, length) => {
+    console.log(i);
+    const index = this.state.imgIndex;
+    let newIndex = index + i;
+    if (newIndex >= length) {
+      newIndex = 0;
+    } else if (newIndex < 0) {
+      newIndex = length - 1;
+    }
+    this.setState({
+      imgIndex: newIndex,
+    });
+  };
+
+  render() {
+    const { imgIndex } = this.state;
+    return (
+      <StaticQuery
+        query={galleryQuery}
+        render={data => {
+          console.log(data);
+          const images = data.allMarkdownRemark.edges;
+          console.log(images);
+          console.log(imgIndex);
+          console.log(images.length);
+          const { frontmatter } = images[imgIndex].node;
+          return (
+            <SectionWrapper backgroundColor={colors.backgroundMain}>
+              <Wrapper>
+                <ImageWrapper>
+                  <img
+                    title={frontmatter.title}
+                    style={{ height: '75%' }}
+                    src={frontmatter.file}
+                    alt={frontmatter.description}
+                  />
+                </ImageWrapper>
+                <GalleryControls
+                  onArrowClick={i => this.handleArrowClick(i, images.length)}
                 />
-              </ImageWrapper>
-              <GalleryControls />
-            </Wrapper>
-          </SectionWrapper>
-        );
-      }}
-    />
-  );
-};
+              </Wrapper>
+            </SectionWrapper>
+          );
+        }}
+      />
+    );
+  }
+}
 
 export default Gallery;
 

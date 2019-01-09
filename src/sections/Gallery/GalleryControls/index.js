@@ -1,19 +1,28 @@
 import React from 'react';
 
-import leftArrow from '../../../img/left-arrow.png';
-import rightArrow from '../../../img/right-arrow.png';
+import leftArrow from '../../../img/YMade_Website_Arrow_Left.svg';
+import rightArrow from '../../../img/YMade_Website_Arrow_Right.svg';
+import Arrow from '../../../components/Arrow';
 
 import ArrowWrapper from '../ArrowWrapper';
 import Wrapper from './Wrapper';
 
-const GalleryControls = () => {
+const GalleryControls = ({ onArrowClick }) => {
   return (
     <Wrapper>
       <ArrowWrapper left>
-        <img src={leftArrow} />
+        <Arrow
+          onClick={() => onArrowClick(-1)}
+          src={leftArrow}
+          alt="Navigational arrow pointing to the left. Changes to previous image in slideshow."
+        />
       </ArrowWrapper>
       <ArrowWrapper right>
-        <img src={rightArrow} />
+        <Arrow
+          onClick={() => onArrowClick(+1)}
+          src={rightArrow}
+          alt="Navigational arrow pointing to the right. Changes to next image in slideshow."
+        />
       </ArrowWrapper>
     </Wrapper>
   );
