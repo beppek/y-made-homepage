@@ -33,6 +33,7 @@ export default createGlobalStyle`
     font-family: 'MessinaSans Regular', Helvetica;
     font-size: 1.8rem;
     font-weight: normal;
+    cursor: url('/assets/YMade_Website_Cursor.png'), auto;
   }
 
   /* HTML5 display-role reset for older browsers */
