@@ -38,21 +38,22 @@ class Gallery extends Component {
         render={data => {
           console.log(data);
           const images = data.allMarkdownRemark.edges;
-          console.log(images);
-          console.log(imgIndex);
-          console.log(images.length);
-          const { frontmatter } = images[imgIndex].node;
+          const imgs = [];
+          images.forEach(img => {
+            const { frontmatter } = img.node;
+            imgs.push(
+              <img
+                title={frontmatter.title}
+                style={{ height: '75%' }}
+                src={frontmatter.file}
+                alt={frontmatter.description}
+              />,
+            );
+          });
           return (
             <SectionWrapper backgroundColor={colors.backgroundMain}>
               <Wrapper>
-                <ImageWrapper>
-                  <img
-                    title={frontmatter.title}
-                    style={{ height: '75%' }}
-                    src={frontmatter.file}
-                    alt={frontmatter.description}
-                  />
-                </ImageWrapper>
+                <ImageWrapper>{imgs[imgIndex]}</ImageWrapper>
                 <GalleryControls
                   onArrowClick={i => this.handleArrowClick(i, images.length)}
                 />
