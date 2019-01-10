@@ -53,7 +53,12 @@ class Gallery extends Component {
           return (
             <SectionWrapper backgroundColor={colors.backgroundMain}>
               <Wrapper>
-                <ImageWrapper>{imgs[imgIndex]}</ImageWrapper>
+                <ImageWrapper>
+                  {imgs[imgIndex]}
+                  <p className="image-text">
+                    {images[imgIndex].node.frontmatter.description}
+                  </p>
+                </ImageWrapper>
                 <GalleryControls
                   onArrowClick={i => this.handleArrowClick(i, images.length)}
                 />
