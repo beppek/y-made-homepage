@@ -22,6 +22,7 @@ const ImageWrapper = styled.div`
   }
 
   .image-text {
+    text-align: center;
     bottom: 1rem;
     left: 0;
     right: 0;
