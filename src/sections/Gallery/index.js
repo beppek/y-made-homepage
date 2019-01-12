@@ -47,6 +47,7 @@ class Gallery extends Component {
               <GalleryImageWrapper>
                 <InnerWrapper>
                   <Img
+                    critical
                     title={frontmatter.title}
                     fluid={fluid}
                     alt={frontmatter.description}
@@ -88,7 +89,7 @@ const galleryQuery = graphql`
             file {
               childImageSharp {
                 fluid(maxWidth: 550) {
-                  ...GatsbyImageSharpFluid_tracedSVG
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
