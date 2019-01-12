@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Layout from '../components/Layout';
 import Hero from '../sections/Hero';
 import BuildTogether from '../sections/BuildTogether';
