@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import SectionWrapper from '../../components/SectionWrapper';
-import ImageWrapper from '../../components/ImageWrapper';
-import Image from '../../components/Image';
 import colors from '../../constants/colors';
 
 import GalleryControls from './GalleryControls';
 import Wrapper from './Wrapper';
+import GalleryImageWrapper from './GalleryImageWrapper';
+import InnerWrapper from './InnerWrapper';
 
 class Gallery extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      imgIndex: 0,
+      imgIndex: 1,
     };
   }
 
@@ -36,16 +37,23 @@ class Gallery extends Component {
       <StaticQuery
         query={galleryQuery}
         render={data => {
+          console.log(data);
           const images = data.allMarkdownRemark.edges;
           const imgs = [];
           images.forEach(img => {
             const { frontmatter } = img.node;
+            const { fluid } = frontmatter.file.childImageSharp;
             imgs.push(
-              <Image
-                title={frontmatter.title}
-                src={frontmatter.file}
-                alt={frontmatter.description}
-              />,
+              <GalleryImageWrapper>
+                <InnerWrapper>
+                  <Img
+                    title={frontmatter.title}
+                    fluid={fluid}
+                    alt={frontmatter.description}
+                  />
+                  <p className="image-text">{frontmatter.description}</p>
+                </InnerWrapper>
+              </GalleryImageWrapper>,
             );
           });
           return (
@@ -54,12 +62,7 @@ class Gallery extends Component {
               backgroundColor={colors.backgroundMain}
             >
               <Wrapper>
-                <ImageWrapper>
-                  {imgs[imgIndex]}
-                  <p className="image-text">
-                    {images[imgIndex].node.frontmatter.description}
-                  </p>
-                </ImageWrapper>
+                {imgs[imgIndex]}
                 <GalleryControls
                   onArrowClick={i => this.handleArrowClick(i, images.length)}
                 />
@@ -82,10 +85,28 @@ const galleryQuery = graphql`
           frontmatter {
             title
             description
-            file
+            file {
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
     }
   }
 `;
+
+// allFile(filter: { absolutePath: { regex: "/" } }) {
+//   edges {
+//     node {
+//       childImageSharp {
+//         fluid(maxWidth: 600) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//   }
+// }

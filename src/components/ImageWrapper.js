@@ -20,17 +20,6 @@ const ImageWrapper = styled.div`
     box-sizing: border-box;
     margin: auto;
   }
-
-  .image-text {
-    text-align: center;
-    bottom: 1rem;
-    left: 0;
-    right: 0;
-    margin: auto;
-    display: block;
-    position: absolute;
-    font-size: 0.6rem;
-  }
 `;
 
 export default ImageWrapper;
