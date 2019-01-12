@@ -88,7 +88,7 @@ const galleryQuery = graphql`
             file {
               childImageSharp {
                 fluid(maxWidth: 550) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }
