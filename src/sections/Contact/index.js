@@ -14,9 +14,13 @@ import InfoText from './InfoText';
 import upArrow from '../../img/YMade_Website_Arrow_ReturnToTop.svg';
 import instagram from '../../img/YMade_Website_Instagram.svg';
 
-const Contact = () => {
+const Contact = ({ onArrowClick }) => {
   return (
-    <SectionWrapper half backgroundColor={colors.backgroundContact}>
+    <SectionWrapper
+      id="contact"
+      half
+      backgroundColor={colors.backgroundContact}
+    >
       <ColumnWrapper>
         <h2 className="contact-header">
           Feel free to contact us to see how we can help with your project.
@@ -30,6 +34,7 @@ const Contact = () => {
       <ColumnWrapper right>
         <ArrowWrapper>
           <Arrow
+            onClick={() => onArrowClick(0)}
             src={upArrow}
             alt="Navigational arrow pointing up, clicking scrolls back to the top"
           />

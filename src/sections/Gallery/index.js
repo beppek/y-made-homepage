@@ -18,7 +18,6 @@ class Gallery extends Component {
   }
 
   handleArrowClick = (i, length) => {
-    console.log(i);
     const index = this.state.imgIndex;
     let newIndex = index + i;
     if (newIndex >= length) {
@@ -37,7 +36,6 @@ class Gallery extends Component {
       <StaticQuery
         query={galleryQuery}
         render={data => {
-          console.log(data);
           const images = data.allMarkdownRemark.edges;
           const imgs = [];
           images.forEach(img => {
@@ -51,7 +49,10 @@ class Gallery extends Component {
             );
           });
           return (
-            <SectionWrapper backgroundColor={colors.backgroundMain}>
+            <SectionWrapper
+              id="gallery"
+              backgroundColor={colors.backgroundMain}
+            >
               <Wrapper>
                 <ImageWrapper>
                   {imgs[imgIndex]}

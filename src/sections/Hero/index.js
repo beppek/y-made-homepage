@@ -13,9 +13,9 @@ import logo from '../../img/YMade_Website_Logo.svg';
 import bigY from '../../img/YMade_Website_Header.svg';
 import downArrow from '../../img/YMade_Website_Arrow_Down.svg';
 
-const Hero = () => {
+const Hero = ({ onArrowClick }) => {
   return (
-    <Wrapper>
+    <Wrapper id="hero">
       <LogoWrapper>
         <h1 className="main-heading">Y Made</h1>
         <Logo src={logo} alt="Y Made" />
@@ -27,7 +27,11 @@ const Hero = () => {
         />
       </ImageWrapper>
       <ArrowWrapper>
-        <Arrow src={downArrow} alt="Downward navigational arrow" />
+        <Arrow
+          onClick={onArrowClick}
+          src={downArrow}
+          alt="Downward navigational arrow"
+        />
       </ArrowWrapper>
     </Wrapper>
   );

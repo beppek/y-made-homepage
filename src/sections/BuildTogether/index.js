@@ -11,7 +11,10 @@ const BuildTogether = () => {
       render={data => {
         const { frontmatter } = data.allMarkdownRemark.edges[0].node;
         return (
-          <SectionWrapper backgroundColor={colors.backgroundInfo}>
+          <SectionWrapper
+            id="build-together"
+            backgroundColor={colors.backgroundInfo}
+          >
             <h2 className="info-header">
               {frontmatter.title}
               <br />
