@@ -87,7 +87,7 @@ const galleryQuery = graphql`
             description
             file {
               childImageSharp {
-                fluid(maxWidth: 600) {
+                fluid(maxWidth: 550) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -98,15 +98,3 @@ const galleryQuery = graphql`
     }
   }
 `;
-
-// allFile(filter: { absolutePath: { regex: "/" } }) {
-//   edges {
-//     node {
-//       childImageSharp {
-//         fluid(maxWidth: 600) {
-//           ...GatsbyImageSharpFluid
-//         }
-//       }
-//     }
-//   }
-// }
