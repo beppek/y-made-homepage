@@ -10,7 +10,10 @@ const Layout = ({ children }) => {
       <Helmet htmlAttributes={{ lang: 'en' }}>
         <meta charSet="utf-8" />
         <title>Y Made</title>
-        <description>Website of Y Made Builder</description>
+        <meta
+          name="Description"
+          content="Website of Y Made || Builder in Melbourne, Victoria, Australia"
+        />
         <link rel="canonical" href="https://ymade.com.au" />
       </Helmet>
       <GlobalStyles />
