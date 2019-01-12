@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import SectionWrapper from '../../components/SectionWrapper';
 import ImageWrapper from '../../components/ImageWrapper';
+import Image from '../../components/Image';
 import colors from '../../constants/colors';
 
 import GalleryControls from './GalleryControls';
@@ -42,9 +43,8 @@ class Gallery extends Component {
           images.forEach(img => {
             const { frontmatter } = img.node;
             imgs.push(
-              <img
+              <Image
                 title={frontmatter.title}
-                style={{ height: '75%' }}
                 src={frontmatter.file}
                 alt={frontmatter.description}
               />,

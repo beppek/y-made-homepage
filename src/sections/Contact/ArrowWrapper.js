@@ -4,7 +4,7 @@ import { paddingNumber, paddingUnit } from '../../constants/units';
 
 const ArrowWrapper = styled.div`
   position: absolute;
-  bottom: ${paddingNumber + paddingUnit};
+  top: ${paddingNumber + paddingUnit};
   right: ${paddingNumber + paddingUnit};
 `;
 
