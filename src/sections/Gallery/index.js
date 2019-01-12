@@ -14,7 +14,7 @@ class Gallery extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      imgIndex: 1,
+      imgIndex: 0,
     };
   }
 
