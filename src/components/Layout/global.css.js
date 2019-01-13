@@ -31,9 +31,38 @@ export default createGlobalStyle`
     padding: 0;
     border: 0;
     font-family: 'MessinaSans Regular', Helvetica;
-    font-size: 1.8rem;
     font-weight: normal;
     cursor: url('/assets/YMade_Website_Cursor.png'), auto;
+    @media only screen and (max-width: 380px) {
+      font-size: 1.1rem;
+    }
+    @media only screen and (min-width: 380px) and (max-width: 550px) {
+      font-size: 1.2rem;
+    }
+    @media only screen and (min-width: 550px) and (max-width: 720px) and (orientation: landscape) {
+      font-size: 1.3rem;
+    }
+    @media only screen and (min-width: 550px) and (max-width: 720px) and (orientation: portrait) {
+      font-size: 1.4rem;
+    }
+    @media only screen and (min-width: 720px) and (max-width: 950px) and (orientation: landscape) {
+      font-size: 1.4rem;
+    }
+    @media only screen and (min-width: 720px) and (max-width: 950px) and (orientation: portrait) {
+      font-size: 1.4rem;
+    }
+    @media only screen and (min-width: 950px) and (max-width: 1250px) and (orientation: landscape) {
+      font-size: 1.5rem;
+    }
+    @media only screen and (min-width: 950px) and (max-width: 1250px) and (orientation: portrait) {
+      font-size: 1.7rem;
+    }
+    @media only screen and (min-width: 1250px) and (max-width: 1600px) {
+      font-size: 1.6rem;
+    }
+    @media only screen and (min-width: 1600px) {
+      font-size: 1.8rem;
+    }
   }
 
   /* HTML5 display-role reset for older browsers */
@@ -51,10 +80,18 @@ export default createGlobalStyle`
   }
 
   .info-text {
-    position: absolute;
-    bottom: ${paddingNumber + paddingUnit};
-    left: ${paddingNumber + paddingUnit};
-    right: ${paddingNumber + paddingUnit};
+    @media only screen and (max-width: 750px) {
+      margin-top: ${paddingNumber + paddingUnit}
+    }
+    @media only screen and (min-width: 750px) {
+      position: absolute;
+      bottom: ${paddingNumber + paddingUnit};
+      left: ${paddingNumber + paddingUnit};
+      right: ${paddingNumber + paddingUnit};
+    }
+    @media only screen and (min-width: 720px) and (max-width: 950px) and (orientation: portrait) {
+      font-size: 1.25rem;
+    }
   }
 
 `;
