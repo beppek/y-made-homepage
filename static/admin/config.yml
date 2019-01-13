@@ -1,5 +1,6 @@
 backend:
-  name: github
+  name: git-gateway
+  branch: master
   repo: beppek/y-made-homepage
 
 media_folder: static/assets/media
