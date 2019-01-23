@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import smoothscroll from 'smoothscroll-polyfill';
 
 import Layout from '../components/Layout';
 import Hero from '../sections/Hero';
@@ -7,6 +8,7 @@ import Gallery from '../sections/Gallery';
 import Contact from '../sections/Contact';
 
 const sections = ['hero', 'build-together', 'gallery', 'contact'];
+smoothscroll.polyfill();
 
 class Home extends Component {
   constructor(props) {
