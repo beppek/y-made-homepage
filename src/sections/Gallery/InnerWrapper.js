@@ -41,6 +41,28 @@ const InnerWrapper = styled.div`
       font-size: 0.6rem !important;
     }
   }
+  @media only screen and (orientation: landscape) and (min-height: 901px) and (max-height: 1080px) {
+    max-width: ${props => (props.portrait ? '65%' : '70%')};
+
+    .image-text {
+      font-size: 0.8rem !important;
+    }
+  }
+  @media only screen and (orientation: landscape) and (min-height: 1081px) and (max-height: 1600px) {
+    max-width: ${props => (props.portrait ? '85%' : '90%')};
+
+    .image-text {
+      font-size: 1rem !important;
+    }
+  }
+  @media only screen and (orientation: landscape) and (min-height: 1601px) and (max-height: 2400px) {
+    /* max-width: ${props => (props.portrait ? '85%' : '90%')}; */
+    max-width: 100%;
+
+    .image-text {
+      font-size: 1rem !important;
+    }
+  }
   /* END LANDSCAPE STYLES */
 
   /* PORTRAIT STYLES */
