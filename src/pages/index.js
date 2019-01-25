@@ -8,7 +8,12 @@ import Gallery from '../sections/Gallery';
 import Contact from '../sections/Contact';
 
 const sections = ['hero', 'build-together', 'gallery', 'contact'];
-smoothscroll.polyfill();
+
+try {
+  smoothscroll.polyfill();
+} catch (error) {
+  console.log(error);
+}
 
 class Home extends Component {
   constructor(props) {
