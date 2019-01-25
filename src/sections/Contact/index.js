@@ -40,11 +40,13 @@ const Contact = ({ onArrowClick }) => {
           />
         </ArrowWrapper>
         <InfoWrapper>
-          <img
-            style={{ height: '50px', position: 'relative', margin: 0 }}
-            src={instagram}
-            alt="Instagram logo"
-          />
+          <a href="https://www.instagram.com/builtbyymade/" target="_blank">
+            <img
+              style={{ height: '50px', position: 'relative', margin: 0 }}
+              src={instagram}
+              alt="Instagram logo"
+            />
+          </a>
           <InfoTextWrapper>
             <InfoText>
               Builders Licence DB-U 59716
