@@ -44,8 +44,8 @@ class Gallery extends Component {
             const { frontmatter } = img.node;
             const { fluid } = frontmatter.file.childImageSharp;
             imgs.push(
-              <GalleryImageWrapper>
-                <InnerWrapper>
+              <GalleryImageWrapper width={`${fluid.presentationWidth}px`}>
+                <InnerWrapper portrait={fluid.aspectRatio < 1}>
                   <Img
                     critical
                     title={frontmatter.title}
@@ -88,8 +88,10 @@ const galleryQuery = graphql`
             description
             file {
               childImageSharp {
-                fluid(maxWidth: 550) {
+                fluid(maxHeight: 1080) {
                   ...GatsbyImageSharpFluid
+                  presentationWidth
+                  presentationHeight
                 }
               }
             }

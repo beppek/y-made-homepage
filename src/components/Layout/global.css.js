@@ -81,7 +81,11 @@ export default createGlobalStyle`
 
   .info-text {
     @media only screen and (max-width: 750px) {
-      margin-top: ${paddingNumber + paddingUnit}
+      margin-top: ${paddingNumber + paddingUnit};
+      position: absolute;
+      bottom: ${paddingNumber + paddingUnit};
+      left: ${paddingNumber + paddingUnit};
+      right: ${paddingNumber + paddingUnit};
     }
     @media only screen and (min-width: 750px) {
       position: absolute;
