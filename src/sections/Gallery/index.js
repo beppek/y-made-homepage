@@ -37,7 +37,6 @@ class Gallery extends Component {
       <StaticQuery
         query={galleryQuery}
         render={data => {
-          console.log(data);
           const images = data.allMarkdownRemark.edges;
           const imgs = [];
           images.forEach(img => {
