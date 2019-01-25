@@ -26,9 +26,9 @@ const Contact = ({ onArrowClick }) => {
           Feel free to contact us to see how we can help with your project.
         </h2>
         <p className="contact-text">
-          0421 108 764
+          <a href="tel:0421108764">0421 108 764</a>
           <br />
-          info@ymade.com.au
+          <a href="mailto:info@ymade.com.au">info@ymade.com.au</a>
         </p>
       </ColumnWrapper>
       <ColumnWrapper right>
@@ -54,7 +54,10 @@ const Contact = ({ onArrowClick }) => {
               Master Builder 213768
             </InfoText>
             <InfoText>
-              Visit our development company Y Projects | Site by Susu Studio
+              Visit our development company Y Projects | Site by{' '}
+              <a target="_blank" href="http://www.susustudio.com/">
+                Susu Studio
+              </a>
             </InfoText>
           </InfoTextWrapper>
         </InfoWrapper>

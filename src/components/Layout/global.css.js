@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
+import colors from '../../constants/colors';
 import { paddingNumber, paddingUnit } from '../../constants/units';
 
 export default createGlobalStyle`
@@ -111,6 +112,16 @@ export default createGlobalStyle`
     }
     @media only screen and (min-width: 720px) and (max-width: 950px) and (orientation: portrait) {
       font-size: 1.25rem;
+    }
+    > a {
+      color: ${colors.text};
+      text-decoration: none;
+      transition: color 0.1s ease;
+
+      &:hover {
+        color: ${colors.backgroundMain};
+        transition: color 0.2s ease;
+      }
     }
   }
 
