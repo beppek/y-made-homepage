@@ -25,7 +25,7 @@ const Contact = ({ onArrowClick }) => {
         <h2 className="contact-header">
           Feel free to contact us to see how we can help with your project.
         </h2>
-        <p className="info-text">
+        <p className="contact-text">
           0421 108 764
           <br />
           info@ymade.com.au

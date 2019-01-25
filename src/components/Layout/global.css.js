@@ -99,4 +99,19 @@ export default createGlobalStyle`
     }
   }
 
+  .contact-text {
+    @media only screen and (max-width: 750px) {
+      margin-top: ${paddingNumber * 3 + paddingUnit};
+    }
+    @media only screen and (min-width: 750px) {
+      position: absolute;
+      bottom: ${paddingNumber + paddingUnit};
+      left: ${paddingNumber + paddingUnit};
+      right: ${paddingNumber + paddingUnit};
+    }
+    @media only screen and (min-width: 720px) and (max-width: 950px) and (orientation: portrait) {
+      font-size: 1.25rem;
+    }
+  }
+
 `;
