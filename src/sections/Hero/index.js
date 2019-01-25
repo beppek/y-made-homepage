@@ -2,7 +2,7 @@ import React from 'react';
 
 import Wrapper from './Wrapper';
 import LogoWrapper from './LogoWrapper';
-import ImageWrapper from '../../components/ImageWrapper';
+import ImageWrapper from './ImageWrapper';
 import Arrow from '../../components/Arrow';
 import Image from '../../components/Image';
 import ArrowWrapper from './ArrowWrapper';
