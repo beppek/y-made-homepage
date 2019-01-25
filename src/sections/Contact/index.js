@@ -40,7 +40,11 @@ const Contact = ({ onArrowClick }) => {
           />
         </ArrowWrapper>
         <InfoWrapper>
-          <a href="https://www.instagram.com/builtbyymade/" target="_blank">
+          <a
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/builtbyymade/"
+            target="_blank"
+          >
             <img
               style={{ height: '50px', position: 'relative', margin: 0 }}
               src={instagram}
@@ -57,11 +61,19 @@ const Contact = ({ onArrowClick }) => {
             </InfoText>
             <InfoText>
               Visit our development company{' '}
-              <a target="_blank" href="http://www.yprojects.com.au/">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="http://www.yprojects.com.au/"
+              >
                 Y Projects
               </a>{' '}
               | Site by{' '}
-              <a target="_blank" href="http://www.susustudio.com/">
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="http://www.susustudio.com/"
+              >
                 Susu Studio
               </a>
             </InfoText>
