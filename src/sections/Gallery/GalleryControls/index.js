@@ -12,6 +12,7 @@ const GalleryControls = ({ onArrowClick }) => {
     <Wrapper>
       <ArrowWrapper left>
         <Arrow
+          sideways
           onClick={() => onArrowClick(-1)}
           src={leftArrow}
           alt="Navigational arrow pointing to the left. Changes to previous image in slideshow."
@@ -19,6 +20,7 @@ const GalleryControls = ({ onArrowClick }) => {
       </ArrowWrapper>
       <ArrowWrapper right>
         <Arrow
+          sideways
           onClick={() => onArrowClick(+1)}
           src={rightArrow}
           alt="Navigational arrow pointing to the right. Changes to next image in slideshow."

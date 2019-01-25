@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Arrow = styled.img`
-  width: 3rem;
+  width: ${props => (props.sideways ? '3.76rem' : '3rem')};
 `;
 
 export default Arrow;

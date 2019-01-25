@@ -33,6 +33,7 @@ export default createGlobalStyle`
     font-family: 'MessinaSans Regular', Helvetica;
     font-weight: normal;
     cursor: url('/assets/YMade_Website_Cursor.png'), auto;
+    letter-spacing: -0.75px;
     @media only screen and (max-width: 380px) {
       font-size: 1.1rem;
     }

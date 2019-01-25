@@ -61,8 +61,7 @@ const InnerWrapper = styled.div`
   width: 100vw;
   max-height: calc(100vh - ${paddingNumber + paddingUnit});
   position: absolute;
-  top: ${props =>
-    props.portrait ? '50%' : `calc(50% + ${paddingNumber / 2 + paddingUnit})`};
+  top: 50%;
   left: 50%;
   transform: translate(-50%, calc(-50% + ${paddingNumber / 2 + paddingUnit}));
 
