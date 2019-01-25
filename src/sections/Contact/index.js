@@ -54,7 +54,11 @@ const Contact = ({ onArrowClick }) => {
               Master Builder 213768
             </InfoText>
             <InfoText>
-              Visit our development company Y Projects | Site by{' '}
+              Visit our development company{' '}
+              <a target="_blank" href="http://www.yprojects.com.au/">
+                Y Projects
+              </a>{' '}
+              | Site by{' '}
               <a target="_blank" href="http://www.susustudio.com/">
                 Susu Studio
               </a>
