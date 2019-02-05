@@ -8,6 +8,7 @@ const InfoText = styled.p`
   margin: ${paddingNumber / 2 + paddingUnit} 0 0;
   font-size: 0.6rem;
   line-height: 1rem;
+  letter-spacing: normal;
   > a {
     color: ${colors.text};
     text-decoration: none;

@@ -96,6 +96,7 @@ const InnerWrapper = styled.div`
     text-align: center;
     margin: 0.5rem auto;
     font-size: 0.8rem;
+    letter-spacing: normal;
   }
 `;
 
