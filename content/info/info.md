@@ -2,12 +2,13 @@
 title: Here's Y We Should
 subtitle: Build Together...
 content: >-
-  We build design driven developments that allow our owners to live a full life,
-  within a home that has been considered down to the last detail. Using a
-  collaborative approach with other like-minded companies, our ethos is to
-  design and build modern inner city homes without compromise. Our key to
-  success lies in being able to maximise space, and focus on what truly adds
-  value, so we can create an attainable and affordable homes for the new
-  generation of house buyer.
+  Y Made is a young and ambitious construction firm focused on boutique to
+  medium sized design orientated residential and multi-residential projects. We
+  thrive building on compact and challenging inner city sites which other
+  builders avoid. We are the ‘gen Y’ of builders who embrace new construction
+  methods and technology to exceed our client’s expectations of both time, cost
+  and quality. Our excitement and genuine passion for building comes when
+  working together with clients and designers to create unique homes that we
+  would want to call our own!
 ---
 
